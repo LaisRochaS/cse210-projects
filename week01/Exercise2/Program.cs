@@ -29,7 +29,6 @@ class Program
         {
             letter = "F";
         }
-
         if (gradePercentage >= 70)
         {
             Console.WriteLine($"Congratulations! You passed the course with a grade of {letter}.");
