@@ -3,7 +3,6 @@ public class Video
     private string _title;
     private string _author;
     private int _length;
-    private string _link;
     private List<Comment> _comments;
     private int _likes;
     private int _dislikes;
@@ -26,11 +25,6 @@ public class Video
         set { _length = value; }
     }
 
-    public string Link
-    {
-        get { return _link; }
-        set { _link = value; }
-    }
 
     public List<Comment> Comments
     {
@@ -50,12 +44,11 @@ public class Video
         set { _dislikes = value; }
     }
 
-    public Video(string title, string author, int length, string link)
+    public Video(string title, string author, int length)
     {
         _title = title;
         _author = author;
         _length = length;
-        _link = link;
         _comments = new List<Comment>();
         _likes = 0;
         _dislikes = 0;
@@ -82,7 +75,6 @@ public class Video
         Console.WriteLine($"Author: {_author}");
         Console.WriteLine($"Length: {_length} seconds");
         Console.WriteLine($"Number of Comments: {GetNumberOfComments()}");
-        Console.WriteLine($"Video Link: {_link}");
         Console.WriteLine($"Likes: {_likes} | Dislikes: {_dislikes}");  
 
         foreach (var comment in _comments)
